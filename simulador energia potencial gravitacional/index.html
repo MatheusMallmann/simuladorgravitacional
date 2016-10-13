@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simulador Gravitacional Potencial</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<div id="cont_canvas">
+<canvas id="canvas" width="700" height="600" style="background:rgb(233,233,233)">
+	Seu navegador não suporta a tag canvas do HTML5!!!
+</canvas>
+</div>
+<div id="coletar_infos">
+<input type="text" name="massa" placeholder="massa do objeto(Kg)" id="massa" onkeypress='return SomenteNumero(event)'>
+<br>
+<br>
+<select id="altura">
+    <option value="8">Árvore(8m)</option>
+	<option value="30">Predio(30m)</option>
+	<option value="58">Guindaste(58m)</option>
+	<option value="300">Torre Eifel(300m)</option>
+	<option value="828">Burj Khalifa(828m)</option>
+</select>
+<br>
+<br>
+<select id="material">
+	<option value="210">Vidro(210 Jaules)</option>
+	<option value="315">Madeira(315 Jaules)</option>
+	<option value="550">Ferro(550 Joules)</option>
+</select>
+<br>
+<br>
+<input type="button" value="calcular" id="btn_calcular"></button>
+
+<hr>
+<div id="ep">
+<div id="E">E</div><div id="p">p</div><div id="equacao_igual">=</div>
+<div id="calc"><span id="m">m</span>.<span id="g">g</span>.<span id="h">h</span></div>
+</div>
+<br><br>
+Joules:<span id="result_joules"></span>
+<br><br>
+Quebrou:<span id="result_quebra"></span>
+</div>
+<div id="obs">OBS:Não foi considerado a resistencia do ar e a aceleração da gravidade considerada é de 10m/s2</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
